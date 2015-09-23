@@ -47,7 +47,7 @@ useGoogleAnalysis: true     # TODO
 sidebar: true
 sidebar-featured-tags: true
 sidebar-about-description: "喵了个咪的"
-sidebar-avatar: /img/avatar-hux.jpg     # use absolute URL.
+sidebar-avatar: /img/avatar-wttree.jpg     # use absolute URL.
 
 # Friends
 friends: [
