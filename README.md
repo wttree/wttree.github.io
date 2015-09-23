@@ -1,4 +1,4 @@
-#Hux Blog
+#WTTREE
 
 ###[View Live Hux Blog &rarr;](http://huxpro.github.io)
 
