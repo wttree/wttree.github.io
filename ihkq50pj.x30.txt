@@ -1,0 +1,21 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#	modified:   about.html
+#	deleted:    attach/2015_Hux_SDE_cn.pdf
+#	deleted:    attach/2015_Hux_SDE_en.pdf
+#	deleted:    attach/2015_Hux_UX & PD_cn.pdf
+#	deleted:    attach/2015_Hux_UX & PD_en.pdf
+#	deleted:    attach/2016_Hux_DEV_en.pdf
+#	deleted:    attach/2016_Hux_PD_en.pdf
+#	new file:   attach/wutong.doc
+#	new file:   "attach/\345\220\264\346\241\220\344\270\252\344\272\272\347\256\200\345\216\206.doc"
+#
+# Changes not staged for commit:
+#	deleted:    "attach/\345\220\264\346\241\220\344\270\252\344\272\272\347\256\200\345\216\206.doc"
+#
+
