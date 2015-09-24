@@ -1,9 +1,5 @@
 #WTTREE
 
-###[View Live Hux Blog &rarr;](http://huxpro.github.io)
-
-
-
 ## New Feature (V1.1）
 
 - We now support a clean and gorgeous **[SideBar](#sidebar)** for displaying more info
