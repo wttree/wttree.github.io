@@ -2,7 +2,7 @@
 
 ###[View Live Hux Blog &rarr;](http://huxpro.github.io)
 
-![](http://huangxuan.me/img/blog-desktop.jpg)
+
 
 ## New Feature (V1.1）
 
@@ -70,7 +70,7 @@ layout:     post
 title:      "Hello 2015"
 subtitle:   "Hello World, Hello Blog"
 date:       2015-01-29 12:00:00
-author:     "Hux"
+author:     "wttree"
 header-img: "img/post-bg-2015.jpg"
 tags:
     - Life
@@ -88,7 +88,6 @@ There are a number of tasks it performs like minification of the JavaScript, com
 
 #### SideBar
 
-![](http://huangxuan.me/img/blog-sidebar.jpg)
 
 Seeing more information may be necessary for you to display, from V1.1, a clean, gorgeous **SideBar** is added for you, which provide more area for displaying possible modules including *Featured Tags*, *Short About Me*, *Friends* etc. You can enable *(it is default enable)* this feature by simply config:
 
