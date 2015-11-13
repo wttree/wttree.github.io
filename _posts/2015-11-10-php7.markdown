@@ -107,14 +107,13 @@ Apache的module目录下可以看到php7的libphp7.so
 
 
 2、php-fpm方式：
+
 ```javascript
 # cp php.ini-development /usr/local/php/lib/php.ini
 # cp /usr/local/php/etc/php-fpm.conf.default /usr/local/php/etc/php-fpm.conf
 # cp /usr/local/php/etc/php-fpm.d/www.conf.default /usr/local/php/etc/php-fpm.d/www.conf
 # cp -R ./sapi/fpm/php-fpm /etc/init.d/php-fpm
 ```
-
-
 
 
 
