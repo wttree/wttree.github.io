@@ -13,24 +13,23 @@ tags:
 
 
 PHP7和HHVM比较
+
 PHP7的在真实场景的性能确实已经和HHVM相当, 在一些场景甚至超过了HHVM。HHVM的运维复杂, 是多线程模型, 这就代表着如果一个线程导致crash了, 那么整个服务就挂了, 并且它不会自动重启。另外它采用JIT, 那么意味着, 重启以后要预热, 没有预热的情况下, 性能较为糟糕。并且多线程模型调试困难, 这对于追求稳定来说的Web服务来说, 是非常不适合的。
 
 Nginx以及PHP7.0之前的版本可以参考此文：Linux环境Nginx安装与调试以及PHP安装
 
-PHP7.0正式版预计在2015年10月份左右发布，目前是PHP7.0 beta3版本
-linux版本：64位CentOS 6.6
-Nginx版本：nginx1.8.0
-php版本：php-7.0.0RC1
+PHP7.0正式版预计在2015年11月26日（官网说的）左右发布，目前是 php-7.0.0RC7版本
+php版本：php-7.0.0RC7
 
 下载
-# wget  https://downloads.php.net/~ab/php-7.0.0RC1.tar.gz
+# wget  https://downloads.php.net/~ab/php-7.0.0RC7.tar.gz
 
 建议安装之前先看看安装帮助文件INSTALL
 
 解压安装
-# tar zxvf php-7.0.0RC1.tar.gz
-# cd php-7.0.0RC1
-首先查看安装帮助
+# tar zxvf php-7.0.0RC7.tar.gz
+# cd php-7.0.0RC7
+首先查看安装帮助（注意： --with-apxs2=/usr/local/apache2/bin/apxs  \  这一步是apache安装的关键，一定要写你的apache2的地址）
 # ./configure   --help
 #  ./configure --prefix=/usr/local/php \
  --with-apxs2=/usr/local/apache2/bin/apxs  \
@@ -129,7 +128,7 @@ sys     0m0.017s
 
 很明显php7的性能是php5的3倍！
 
-配置opcache
+配置opcache（nginx下）
 官网地址：http://php.net/opcache
 使用下列推荐设置来获得较好的 性能：
 opcache.memory_consumption=128
