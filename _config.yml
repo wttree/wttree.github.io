@@ -33,7 +33,11 @@ kramdown:
 # Duoshuo settings
 # please set your own DuoShuo account in `post.html` and `about.html`
 useDuoshuo: true    # use both Comment and Share
-useShare: true      # use Comment only. seeing the Share component is depend on Comment so we can NOT use share only.
+useShare: false      # use Comment only. seeing the Share component is depend on Comment so we can NOT use share only.
+
+
+duoshuo_username: wttree
+# Share component is depend on Comment so we can NOT use share only.
 
 
 # Todo: Analysis settings
