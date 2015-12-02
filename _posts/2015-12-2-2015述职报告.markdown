@@ -17,364 +17,299 @@ tags:
 
 ## 在大数据的工作
 
+title: 2015述职报告
+speaker: Wu Tong
+url: http://10.77.136.63:8585/
+transition: move
+files: /js/demo.js,/css/demo.css,/js/zoom.js
+theme: moon
+usemathjax: yes
 
-<!--
-    Powered By nodePPT - This is probably the best web presentation tool so far!
-    version: 1.3.8
-    site: https://github.com/ksky521/nodePPT
-    date: 
--->
-<!doctype html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>2015述职报告 - By Wu Tong</title>
-    <link rel="stylesheet" media="all" href="/css/nodeppt.css">
-    <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="/css/phone.css">
-    
-    <link rel="stylesheet" href="/js/highlight/styles/monokai_sublime.css">
-    <link rel="stylesheet" href="/css/font-awesome.css">
-    
-<link rel="stylesheet" href="/css/theme.moon.css">
-</head>
-<body>
-<div class="slides">
-    <slides id="container">
-        <slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
-<h1>2015述职报告</h1>
-<h2>对象聚合 数据挖掘相关</h2>
-<p><small>Wu Tong</small></p>
+[slide]
 
-</article></section></slide>
-<slide class="slide"><section class="slide-wrapper"><article class="flexbox vleft">
-<h1>2015年</h1>
-<blockquote>
-<p>自身最大提升在于：</p>
-<p>1、对于不同业务领域的技术规划能力和落地能力。</p>
-<p>2、技术领域扩展，如大数据计算领域等技术领域扩展，介入相关任务计算领域。</p>
-</blockquote>
+# 2015述职报告
+## 对象聚合 数据挖掘相关
+<small>Wu Tong</small>
 
-</article></section></slide>
-<slide class="slide fill" style="background-image:url('/img/bg.jpg')"><section class="slide-wrapper"><hgroup>
-<h2>2015年背景及遇到问题</h2>
+[slide]
 
-</hgroup><article>
+# 2015年 {:&.flexbox.vleft}
+> 自身最大提升在于：
 
-<ul class="rollIn">
-<li>现有业务平台化水平低</li>
-<li>新业务引入平台待升级改造</li>
-<li>组件化程度低</li>
-<li>现有平台功能复杂冗余</li>
-<li>数据库服务化水平低</li>
-<li>个人技术领域单一</li>
-</ul>
+>1、对于不同业务领域的技术规划能力和落地能力。
 
-</article></section></slide>
-<slide class="slide fill" style="background-image:url('/img/bg1.png')"><section class="slide-wrapper"><hgroup>
-<h2>解决方案:</h2>
+>2、技术领域扩展，如大数据计算领域等技术领域扩展，介入相关任务计算领域。
 
-</hgroup><article>
+[slide style="background-image:url('/img/bg.jpg')"]
+## 2015年背景及遇到问题
+----
+* 现有业务平台化水平低 {:&.rollIn}
+* 新业务引入平台待升级改造
+* 组件化程度低
+* 现有平台功能复杂冗余
+* 数据库服务化水平低
+* 个人技术领域单一
 
-<ul class="fadeIn">
-<li>平台化<ul>
-<li>对各领域平台化需求优先build beta版直接上线，满足需求后，再快速迭代。</li>
-<li>引入高效工具及开发框架提升平台开发效率。如qb、idb、sce。</li>
-<li>利用组件化提升各个平台开发效率</li>
-</ul>
-</li>
-<li>组件化<ul>
-<li>feed</li>
-<li>数据库操作</li>
-<li>登录验证</li>
-<li>手机版等</li>
-</ul>
-</li>
-<li>服务化<ul>
-<li>结合PHP和HIVE，结合前端的展现、方便操作等优势和hive的数据计算能力优势</li>
-<li>数据库服务化迁移</li>
-</ul>
-</li>
-</ul>
+[slide style="background-image:url('/img/bg1.png')"]
+## 解决方案:
+----
+* 平台化 {:&.fadeIn}
+    * 对各领域平台化需求优先build beta版直接上线，满足需求后，再快速迭代。
+    * 引入高效工具及开发框架提升平台开发效率。如qb、idb、sce。
+	* 利用组件化提升各个平台开发效率
+* 组件化
+    * feed
+	* 数据库操作
+	* 登录验证
+	* 手机版等
+* 服务化
+	* 结合PHP和HIVE，结合前端的展现、方便操作等优势和hive的数据计算能力优势
+	* 数据库服务化迁移
+	
+	
+	
+	
 
-</article></section></slide>
-<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
-<h1>内容方面</h1>
+[slide]
 
-</article></section></slide>
-<slide class="slide"><section class="slide-wrapper"><article>
-<h2>推荐</h2>
-<h3>点击推荐引擎 访客推荐</h3>
-<h2><a href="http://darwin.intra.weibo.com/recommendation/hotmblogguest" target="_blank">http://darwin.intra.weibo.com/recommendation/hotmblogguest</a> <a href="http://open.weibo.com/darwinh5/index" target="_blank">http://open.weibo.com/darwinh5/index</a></h2>
-<p><img src="/tuijian.png" alt="open.weibo.com/darwinh5/index" title="open.weibo.com/darwinh5/index"></p>
+# 内容方面
 
-</article></section></slide>
-<slide class="slide"><section class="slide-wrapper"><hgroup>
-<h2>个性化PUSH</h2>
-<h3>push后台</h3>
+[slide]
 
-</hgroup><article>
+## 推荐
 
-<p><img src="/push.png" alt="push" title="push"></p>
+### 点击推荐引擎 访客推荐
 
-</article></section></slide>
-<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
-<h1>用户方面</h1>
+http://darwin.intra.weibo.com/recommendation/hotmblogguest http://open.weibo.com/darwinh5/index
+----
 
-</article></section></slide>
-<slide class="slide"><section class="slide-wrapper"><hgroup>
-<h2>用户质量</h2>
-<h3>用户质量平台迁移及后端改造 <a href="http://uq.admin.weibo.com/" target="_blank">http://uq.admin.weibo.com/</a></h3>
+![open.weibo.com/darwinh5/index](/tuijian.png "open.weibo.com/darwinh5/index")
 
-</hgroup><article>
 
-<p><img src="/uq2.jpg" alt="uq.admin.weibo.com" title="uq.admin.weibo.com"></p>
+[slide]
 
-</article></section></slide>
-<slide class="slide"><section class="slide-wrapper"><hgroup>
-<h2>用户画像</h2>
-<h3>离线用户画像、圈用户平台 <a href="http://open.weibo.com/darwin/search/cron/index" target="_blank">http://open.weibo.com/darwin/search/cron/index</a></h3>
+## 个性化PUSH
 
-</hgroup><article>
+### push后台
+----
 
-<p><img src="/huaxiang.png" alt="open.weibo.com/darwin/search/cron/index" title="http://open.weibo.com/darwin/search/cron/index"></p>
+![push](/push.png "push")
 
-</article></section></slide>
-<slide class="slide"><section class="slide-wrapper"><hgroup>
-<h2>兴趣能力标签</h2>
-<h3>开放平台、展示系统用户呈现升级 <a href="http://open.weibo.com/darwin/search/user" target="_blank">http://open.weibo.com/darwin/search/user</a></h3>
 
-</hgroup><article>
 
-<p><img src="/jichufuwu.png" alt="open.weibo.com" title="open.weibo.com"></p>
 
-</article></section></slide>
-<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
-<h1>基础架构方面</h1>
 
-</article></section></slide>
-<slide class="slide"><section class="slide-wrapper"><hgroup>
-<h2>展示系统手机版</h2>
-<ul>
-<li>建立darwin手机版框架</li>
-</ul>
+	
+[slide]
 
-</hgroup><article>
+# 用户方面
 
-<p class="fadeIn"><span><img src="/shoujiban.jpg" alt="shouji" title="shouji"><span></p>
+[slide]
 
-</article></section></slide>
-<slide class="slide"><section class="slide-wrapper"><hgroup>
-<h2>元数据平台功能改造</h2>
+## 用户质量
 
-</hgroup><article>
+### 用户质量平台迁移及后端改造 http://uq.admin.weibo.com/
+----
 
-<p><img src="/yuanshuju.png" alt="yuanshuju" title="yuanshuju"></p>
+![uq.admin.weibo.com](/uq2.jpg "uq.admin.weibo.com")
 
-</article></section></slide>
-<slide class="slide"><section class="slide-wrapper"><hgroup>
-<h2>数据服务平台 白名单平台</h2>
 
-</hgroup><article>
+[slide]
 
-<p><img src="/baimingdan.png" alt="open.weibo.com" title="open.weibo.com"></p>
+## 用户画像
 
-</article></section></slide>
-<slide class="slide"><section class="slide-wrapper"><article>
-<h2>数据挖掘相关</h2>
-<h2>1、统计</h2>
-<p><img src="/tongji.png" alt="tongji" title="tongji"></p>
+### 离线用户画像、圈用户平台 http://open.weibo.com/darwin/search/cron/index
+----
 
-</article></section></slide>
-<slide class="slide"><section class="slide-wrapper"><hgroup>
-<h2>Hive|离线计算平台</h2>
-<ul class="fadeIn">
-<li>结合PHP和HIVE，结合前端的展现、方便操作等优势和hive的数据计算能力优势</li>
-<li>建立方便PM、RD使用的离线计算平台。</li>
-</ul>
+![open.weibo.com/darwin/search/cron/index](/huaxiang.png "http://open.weibo.com/darwin/search/cron/index")
 
-</hgroup><article>
 
-<p class="fadeIn"><span><img src="/hive.jpg" alt="hive" title="hive"><span></p>
+[slide]
 
-</article></section></slide>
-<slide class="slide"><section class="slide-wrapper"><article>
-<h2>2、挖掘</h2>
-<p>垃圾评论挖掘系统</p>
-<ul>
-<li><p>AdaBoost算法是通过改变数据权重分布来实现的，将每轮训练得到的弱分类器线性加权集合起来，得到最终的强分类器。</p>
-<ul>
-<li>①相似度 评论与微博的相似性</li>
-<li>②超链接数 广告超链接</li>
-<li>③重复评论 不同微博之间大量发表了相同或者相似的评论</li>
-<li>④情感词数评论</li>
-<li>⑤广告词数</li>
-<li>⑥句子长度</li>
-<li>⑧评论的回复</li>
-<li>⑨特殊标点符号数量
-<br></li>
-</ul>
-</li>
-</ul>
-<p><img src="/xunlian.png" alt="xunlian" title="xunlian"></p>
+## 兴趣能力标签
 
-</article></section></slide>
-<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
-<h1>2016年规划</h1>
+### 开放平台、展示系统用户呈现升级 http://open.weibo.com/darwin/search/user
+----
 
-</article></section></slide>
-<slide class="slide fill" style="background-image:url('/img/bg1.png')"><section class="slide-wrapper"><hgroup>
-<h2>2016年背景及遇到问题 解决方案:</h2>
+![open.weibo.com](/jichufuwu.png "open.weibo.com")
 
-</hgroup><article>
 
-<ul class="fadeIn">
-<li>平台化继续推进<ul>
-<li>加强同各组需求沟通，提炼总结出通用平台提升部门研发效率。</li>
-<li>组件化 页面优化持续提升。</li>
-<li>推广平台，更多分享，提升平台覆盖率。</li>
-</ul>
-</li>
-<li>挖掘项目效率低 组件化成都不高<ul>
-<li>学习了解挖掘相关框架及开发方式</li>
-<li>参与更多项目提升开发效率 ，提升脚本执行效率</li>
-</ul>
-</li>
-<li>稳定性有待提高<ul>
-<li>数据库全部迁移idb</li>
-<li>更多引入缓存</li>
-<li>对于影响线上操作，引入测试预览环境</li>
-</ul>
-</li>
-</ul>
 
-</article></section></slide>
-<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
-<h1>Q/A</h1>
 
-</article></section></slide>
-<slide class="slide"><section class="slide-wrapper"><article>
-<p><img src="/2.png" alt="shouji" title="shouji"></p>
+[slide]
 
-</article></section></slide>
-<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
-<p>基础方面：</p>
-<p>数据服务平台|推荐接口 长文接口|深入挖掘与聚合微博内部优质内容，通过建设优质内容池以及完善平台服务以提升优质内容分发效率|
-白名单</p>
-<p>元数据|元数据平台</p>
-<p>hive平台|</p>
-<p>数据挖掘|</p>
-<p>展示系统 手机版</p>
-<p>离线计算平台</p>
-<p>用户画像 圈用户</p>
-<p>元数据管理</p>
-<p>用户质量平台</p>
-<p>push平台</p>
-<p>垃圾评论挖掘系统</p>
-<p>对象聚合库|对象|展示系统|</p>
-<p>用户方面：</p>
-<p>标签体系|@石敏 @许婷|兴趣标签 能力标签 内容标签|一三二级标签|场景:找人 推荐分组|</p>
-<p>用户画像|@许婷|年龄学历等用户画像</p>
-<p>用户组业务指标|</p>
-<p>找群|@杨帆|</p>
-<p>用户质量|用户质量平台|@王亮 @杨帆</p>
-<p>大数据开放平台|@唐祥|基础服务 用户画像 圈粉丝</p>
-<p>内容方面：</p>
-<p>点击推荐引擎|@洪磊 @袁杰 @小路|文章对象:标签 质量;用户对象:短期长期兴趣|推荐模型 排序模型</p>
-<p>个性化PUSH|@唐祥 @月笛|长文 亲密度|是通过大数据技术，基于关系以及内容兴趣实现个性化推送博主发布内容给合适的粉丝，提升粉丝在微博中的活跃度以及粘性，同时针对不同使用频度的用户|</p>
-<p>访客个性化推荐|@石敏|访客行为|vid</p>
-<p>长文库|内容标签 用户标签 质量的分 优质策略|微博内部内容：用户原创微博和长微博，以及用户分享至微博内的文章;微博外部内容：新浪CMS新闻，以及站外综合网站或者垂直网站的新闻</p>
-<p>===================</p>
-<p>结合PHP和HIVE，结合前端的展现、方便操作等优势和hive的数据计算能力优势
-建立方便PM、RD使用的离线计算平台。<br>1、技术领域的扩展
-2、发挥技术优势到产品中</p>
-<h1>3、有所创新，积极主动，寻求突破和改进。    </h1>
-<p>最近1年半，自身最大的提升在于对于不同技术领域的技术规划能力和落地能力。
-背景:     1．php框架调用关系复杂。2.通用服务及扩展不足。3.缓存的清理和维护成本高，易出错。4.模版服务版本低等因素逐渐显现。
-目标:    主导如下项目，为阿拉丁开发、框搜索服务开发、前后端通信、测试上线流程、用户行为、模板开发等提供解决方案。同时提升架构性能，提升日常开发效率。
-角色:       如下相关子项目技术负责人</p>
-<p>成果：
-    〖搜索页面缓存〗〖sug预读、预取〗〖移动搜索支持chunked〗
-·    收益：缓存搜索结果页，分两层缓存，设有缓存update时间，主动更新机制，延迟降到最低，平均值优化33ms。
-·    收益：重构接入层，新增适配联盟等接入，为chuncked提供保证，上线后首屏时间80分位点值优化120ms，平均值优化97ms。
-·    文档：《接入层策略》《适配、联盟逻辑》《wiaui下线》《Uid 下线》</p>
-<p>==================================================
-aaa</p>
+# 基础架构方面
 
-</article></section></slide>
-        
+[slide]
 
-        <!-- <slide class="slide logoslide dark nobackground">
-            <article class="flexbox vcenter">
-                <h2 style="color: white;">Powered By nodePPT v1.3.8</h2>
-            </article>
-        </slide> -->
-        <div class="slideTip" id="tip"></div>
-    </slides>
-</div>
-<canvas id="drawBoard" class="draw-board" width="900" height="700"></canvas>
-<div class="progress"><span id="progress"></span></div>
-<div id="_buttons">
-    <div class="_btn-box" id="_btn-box" style="display:none;">
-        <button class="fa fa-arrow-circle-left" id="_btn-prev"></button>
-        <button class="fa fa-arrow-circle-right" id="_btn-next"></button>
-        <button class="fa fa-paint-brush" id="_btn-brush"></button>
-        <button class="fa fa-compress" id="_btn-overview" data-toggle="fa fa-expand"></button>
-    </div>
-    <button class="fa fa-bars" id="_btn-bar"  data-toggle="fa fa-close"></button>
-</div>
-<script src="/js/mixjs/lib/mix.0.3.0.min.js"></script>
-<script>
-var base = location.protocol + '//' + location.host;
+## 展示系统手机版
 
-MixJS.config({
-    baseURL: [ base, 'js'].join('/')+'/'
-});
+* 建立darwin手机版框架
 
-</script>
-<script src="/js/mixjs/lib/event/broadcast.js"></script>
-<script src="/js/nodeppt.js"></script>
-<script>
-Slide.init({
-    containerID: 'container',
-    drawBoardID: 'drawBoard',
-    slideClass: '.slide',
-    buildClass: '.build',
-    progressID: 'progress',
-    transition: 'move',
-    width: 1100,
-    dir: './',
-    
-    control:{
-        type: 'socket',
-        args:{
-            isControl:  false,
-            host: base,
-            clientId: " 0",
-            //摇一摇
-            shake: true
-        }
-    },
-    
-    tipID: 'tip'
-});
-MixJS.loadJS('highlight/highlight.pack.js',function(){
-    hljs.tabReplace = '  ';
-    hljs.initHighlightingOnLoad();
-});
-</script>
-<script src="/js/demo.js"></script>
-<link rel="stylesheet" href="/css/demo.css">
-<script src="/js/zoom.js"></script>
+----
 
-<!-- MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-  config: ["TeX-AMS-MML_HTMLorMML.js"],
-  tex2jax: {inlineMath: [['\\(','\\)']]}});
-  //['$','$'], 避免货币价格冲突
-</script>
-<script type="text/javascript" src="/js/mathjax/MathJax.js"></script>
+![shouji](/shoujiban.jpg "shouji"){:&.fadeIn}
 
-<!--placeholder-->
-</body>
-</html>
+
+[slide]
+
+## 元数据平台功能改造
+----
+
+![yuanshuju](/yuanshuju.png "yuanshuju")
+
+
+[slide]
+
+## 数据服务平台 白名单平台
+----
+
+![open.weibo.com](/baimingdan.png "open.weibo.com")
+
+
+[slide]
+## 数据挖掘相关
+
+##1、统计
+
+![tongji](/tongji.png "tongji")
+
+[slide]
+
+## Hive|离线计算平台
+
+* 结合PHP和HIVE，结合前端的展现、方便操作等优势和hive的数据计算能力优势 {:&.fadeIn}
+* 建立方便PM、RD使用的离线计算平台。
+----
+
+![hive](/hive.jpg "hive"){:&.fadeIn}
+
+
+[slide]
+## 2、挖掘 
+
+垃圾评论挖掘系统
+
+* AdaBoost算法是通过改变数据权重分布来实现的，将每轮训练得到的弱分类器线性加权集合起来，得到最终的强分类器。
+
+	* ①相似度 评论与微博的相似性
+	* ②超链接数 广告超链接
+	* ③重复评论 不同微博之间大量发表了相同或者相似的评论
+	* ④情感词数评论
+	* ⑤广告词数
+	* ⑥句子长度
+	* ⑧评论的回复
+	* ⑨特殊标点符号数量
+<br>
+	
+![xunlian](/xunlian.png "xunlian")
+
+
+
+[slide]
+
+# 2016年规划
+
+
+[slide style="background-image:url('/img/bg1.png')"]
+## 2016年背景及遇到问题 解决方案:
+----
+* 平台化继续推进 {:&.fadeIn}
+    * 加强同各组需求沟通，提炼总结出通用平台提升部门研发效率。
+    * 组件化 页面优化持续提升。
+	* 推广平台，更多分享，提升平台覆盖率。
+* 挖掘项目效率低 组件化成都不高
+    * 学习了解挖掘相关框架及开发方式
+	* 参与更多项目提升开发效率 ，提升脚本执行效率
+* 稳定性有待提高
+	* 数据库全部迁移idb
+	* 更多引入缓存
+	* 对于影响线上操作，引入测试预览环境
+	
+[slide]
+# Q/A
+
+[slide]
+![shouji](/2.png "shouji")
+
+[slide]
+
+基础方面：
+
+数据服务平台|推荐接口 长文接口|深入挖掘与聚合微博内部优质内容，通过建设优质内容池以及完善平台服务以提升优质内容分发效率|
+白名单
+
+元数据|元数据平台
+
+hive平台|
+
+数据挖掘|
+
+展示系统 手机版
+
+离线计算平台
+
+用户画像 圈用户
+
+元数据管理
+
+用户质量平台
+
+push平台
+
+垃圾评论挖掘系统
+
+对象聚合库|对象|展示系统|
+
+用户方面：
+
+标签体系|@石敏 @许婷|兴趣标签 能力标签 内容标签|一三二级标签|场景:找人 推荐分组|
+
+用户画像|@许婷|年龄学历等用户画像
+
+用户组业务指标|
+
+找群|@杨帆|
+
+用户质量|用户质量平台|@王亮 @杨帆
+
+大数据开放平台|@唐祥|基础服务 用户画像 圈粉丝
+
+内容方面：
+
+
+
+点击推荐引擎|@洪磊 @袁杰 @小路|文章对象:标签 质量;用户对象:短期长期兴趣|推荐模型 排序模型
+
+个性化PUSH|@唐祥 @月笛|长文 亲密度|是通过大数据技术，基于关系以及内容兴趣实现个性化推送博主发布内容给合适的粉丝，提升粉丝在微博中的活跃度以及粘性，同时针对不同使用频度的用户|
+
+访客个性化推荐|@石敏|访客行为|vid
+
+长文库|内容标签 用户标签 质量的分 优质策略|微博内部内容：用户原创微博和长微博，以及用户分享至微博内的文章;微博外部内容：新浪CMS新闻，以及站外综合网站或者垂直网站的新闻
+
+
+
+
+
+===================
+
+
+结合PHP和HIVE，结合前端的展现、方便操作等优势和hive的数据计算能力优势
+建立方便PM、RD使用的离线计算平台。	
+1、技术领域的扩展
+2、发挥技术优势到产品中
+3、有所创新，积极主动，寻求突破和改进。	
+===========================================================
+最近1年半，自身最大的提升在于对于不同技术领域的技术规划能力和落地能力。
+背景: 	1．php框架调用关系复杂。2.通用服务及扩展不足。3.缓存的清理和维护成本高，易出错。4.模版服务版本低等因素逐渐显现。
+目标:	主导如下项目，为阿拉丁开发、框搜索服务开发、前后端通信、测试上线流程、用户行为、模板开发等提供解决方案。同时提升架构性能，提升日常开发效率。
+角色:       如下相关子项目技术负责人
+
+成果：
+	〖搜索页面缓存〗〖sug预读、预取〗〖移动搜索支持chunked〗
+·	收益：缓存搜索结果页，分两层缓存，设有缓存update时间，主动更新机制，延迟降到最低，平均值优化33ms。
+·	收益：重构接入层，新增适配联盟等接入，为chuncked提供保证，上线后首屏时间80分位点值优化120ms，平均值优化97ms。
+·	文档：《接入层策略》《适配、联盟逻辑》《wiaui下线》《Uid 下线》
+
+==================================================
+aaa
