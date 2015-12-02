@@ -4,7 +4,7 @@ title:      "nodePPT for window"
 subtitle:   "mac党不用看 你们本身用过好几遍了"
 date:       2015-11-10
 author:     "wttree"
-header-img: "img/post-bg-2015.jpg"
+header-img: "img/_DSC0039.jpg"
 tags:
     - php7
     - apache
@@ -15,7 +15,7 @@ tags:
 
 # 初衷
 
-  本文初衷：不是教程，不是备忘，是一直在用，想赞美下前同事 @三水清（https://github.com/ksky521），看了下git，每天都在更新，加了很多功能。
+  本文初衷：不是教程，不是备忘，只是一直在用，想赞美下前同事 @三水清（https://github.com/ksky521）。看了下git，每天都在更新，加了很多功能。
 
 ## Windows平台下的node.js安装
 
