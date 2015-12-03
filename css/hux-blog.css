@@ -47,7 +47,11 @@
   padding-left: 0px;
 }
 body {
-  font-family: "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
+  /* Hux learn from
+     *     TypeIsBeautiful,
+     *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
+     */
+  font-family: -apple-system, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
   line-height: 1.7;
   font-size: 16px;
   color: #404040;
@@ -62,13 +66,17 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
+  /* Hux learn from
+     *     TypeIsBeautiful,
+     *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
+     */
+  font-family: -apple-system, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
   line-height: 1.7;
   line-height: 1.1;
   font-weight: bold;
 }
 h4 {
-  font-size: 20px;
+  font-size: 21px;
 }
 a {
   color: #404040;
@@ -128,11 +136,11 @@ pre,
 .table-responsive {
   -webkit-overflow-scrolling: touch;
 }
-@media screen and (max-width: 500px) {
-  pre code {
-    display: block;
-    width: 500px;
-  }
+pre code {
+  display: block;
+  width: auto;
+  white-space: pre;
+  word-wrap: normal;
 }
 .post-container a {
   color: #337ab7;
@@ -141,9 +149,45 @@ pre,
 .post-container a:focus {
   color: #0085a1;
 }
+.post-container h1,
+.post-container h2,
+.post-container h3,
+.post-container h4,
+.post-container h5,
+.post-container h6 {
+  margin: 30px 0 10px;
+}
+.post-container h5 {
+  font-size: 19px;
+  font-weight: 600;
+  color: gray;
+}
+.post-container h5 + p {
+  margin-top: 5px;
+}
+.post-container h6 {
+  font-size: 16px;
+  font-weight: 600;
+  color: gray;
+}
+.post-container h6 + p {
+  margin-top: 5px;
+}
 .post-container ul,
 .post-container ol {
   margin-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .post-container ul,
+  .post-container ol {
+    padding-left: 30px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .post-container ul,
+  .post-container ol {
+    padding-left: 20px;
+  }
 }
 .post-container ol ol,
 .post-container ol ul,
@@ -168,11 +212,51 @@ pre,
   .navbar-default .navbar-collapse {
     border: none;
     background: white;
+    box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.239216) 0px 1px 4px;
     border-radius: 2px;
-    width: 160px;
+    width: 170px;
     float: right;
     margin: 0px;
-    box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
+  }
+  #huxblog_navbar {
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: top right;
+    transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+    -webkit-transform: scaleX(0);
+    -webkit-transform-origin: top right;
+    -webkit-transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #huxblog_navbar a {
+    font-size: 13px;
+    line-height: 28px;
+  }
+  #huxblog_navbar .navbar-collapse {
+    height: 0px;
+    transform: scaleY(0);
+    transform-origin: top right;
+    transition: transform 500ms cubic-bezier(0.23, 1, 0.32, 1);
+    -webkit-transform: scaleY(0);
+    -webkit-transform-origin: top right;
+    -webkit-transition: -webkit-transform 500ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #huxblog_navbar li {
+    opacity: 0;
+    transition: opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 205ms;
+    -webkit-transition: opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 205ms;
+  }
+  #huxblog_navbar.in {
+    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+    opacity: 1;
+  }
+  #huxblog_navbar.in .navbar-collapse {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+  }
+  #huxblog_navbar.in li {
+    opacity: 1;
   }
 }
 .navbar-custom {
@@ -183,7 +267,11 @@ pre,
   left: 0;
   width: 100%;
   z-index: 3;
-  font-family: "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
+  /* Hux learn from
+     *     TypeIsBeautiful,
+     *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
+     */
+  font-family: -apple-system, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
   line-height: 1.7;
 }
 .navbar-custom .navbar-brand {
@@ -198,6 +286,7 @@ pre,
 .navbar-custom .nav li a {
   text-transform: uppercase;
   font-size: 12px;
+  line-height: 20px;
   font-weight: 800;
   letter-spacing: 1px;
 }
@@ -329,7 +418,11 @@ pre,
 }
 .intro-header .site-heading .subheading,
 .intro-header .page-heading .subheading {
-  font-family: "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
+  /* Hux learn from
+     *     TypeIsBeautiful,
+     *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
+     */
+  font-family: -apple-system, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
   line-height: 1.7;
   font-size: 18px;
   line-height: 1.1;
@@ -353,7 +446,11 @@ pre,
   display: block;
 }
 .intro-header .post-heading .subheading {
-  font-family: "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
+  /* Hux learn from
+     *     TypeIsBeautiful,
+     *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
+     */
+  font-family: -apple-system, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
   line-height: 1.7;
   font-size: 17px;
   line-height: 1.4;
@@ -397,6 +494,7 @@ pre,
 }
 .post-preview > a > .post-subtitle {
   font-size: 15px;
+  line-height: 1.3;
   margin: 0;
   font-weight: 300;
   margin-bottom: 10px;
@@ -529,7 +627,11 @@ form .row:first-child .floating-label-form-group {
   border-top: 1px solid #eeeeee;
 }
 .btn {
-  font-family: "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
+  /* Hux learn from
+     *     TypeIsBeautiful,
+     *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
+     */
+  font-family: -apple-system, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
   line-height: 1.7;
   text-transform: uppercase;
   font-size: 14px;
@@ -549,17 +651,22 @@ form .row:first-child .floating-label-form-group {
   color: white;
 }
 .pager {
-  margin: 20px 0 0;
+  margin: 20px 0 0 !important;
+  padding: 0px !important;
 }
 .pager li > a,
 .pager li > span {
-  font-family: "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
+  /* Hux learn from
+     *     TypeIsBeautiful,
+     *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
+     */
+  font-family: -apple-system, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
   line-height: 1.7;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 800;
   letter-spacing: 1px;
-  padding: 10px 5px;
+  padding: 10px;
   background-color: white;
   border-radius: 0;
 }
@@ -679,12 +786,12 @@ body {
     font-size: 14px;
   }
 }
-.one-tag-list:first-child {
+.t:first-child {
   margin-top: 0px;
 }
 .listing-seperator {
   color: #0085a1;
-  font-size: 17px !important;
+  font-size: 21px !important;
 }
 .listing-seperator::before {
   margin-right: 5px;
@@ -692,15 +799,24 @@ body {
 @media only screen and (min-width: 768px) {
   .listing-seperator {
     font-size: 20px !important;
-    line-height: 1.5 !important;
-    margin-top: 5px;
+    line-height: 2 !important;
   }
+}
+.one-tag-list .tag-text {
+  font-weight: 200;
+  /* Hux learn from
+     *     TypeIsBeautiful,
+     *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
+     */
+  font-family: -apple-system, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
+  line-height: 1.7;
 }
 .one-tag-list .post-preview {
   position: relative;
 }
 .one-tag-list .post-preview > a .post-title {
-  font-size: 15px;
+  font-size: 16px;
+  font-weight: 500;
   margin-top: 20px;
 }
 .one-tag-list .post-preview > a .post-subtitle {
@@ -763,7 +879,7 @@ body {
   margin-top: 3px;
 }
 /* Hux customize Style for Duoshuo */
-.comment #ds-thread {
+.comment {
   margin-top: 20px;
 }
 .comment #ds-thread #ds-reset a.ds-like-thread-button {
@@ -786,6 +902,56 @@ body {
 .comment #ds-thread #ds-reset .ds-gradient-bg {
   background: none;
 }
+.comment #ds-thread #ds-reset .ds-post-options {
+  border-bottom: 1px solid #ccc;
+}
+.comment #ds-thread #ds-reset .ds-post-button {
+  border-bottom: 1px solid #ccc;
+}
 #ds-smilies-tooltip ul.ds-smilies-tabs li a {
   background: white !important;
+}
+.page-fullscreen .intro-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.page-fullscreen #tag-heading {
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding-bottom: 150px;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+  -webkit-flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.page-fullscreen footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding-bottom: 20px;
+  opacity: 0.6;
+  color: #fff;
+}
+.page-fullscreen footer .copyright {
+  color: #fff;
+}
+.page-fullscreen footer .copyright a {
+  color: #fff;
+}
+.page-fullscreen footer .copyright a:hover {
+  color: #ddd;
 }

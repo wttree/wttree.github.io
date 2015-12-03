@@ -1,10 +1,12 @@
 # Site settings
 title: WUTONG
+SEOTitle: wttree | 吴桐吴桐 
 header-img: img/home-bg.jpg
 email: wttree@qq.com
 description: "吴桐的blog。@吴桐吴桐 ／PHP／Front-End sometimes／Web &amp; Mobile Lover／WEIBO Engineer 2 year／Baidu Engineer 3year"
 baseurl: ""
 url: "http://wttree.github.io"
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 
 # SNS settings
@@ -17,9 +19,10 @@ github_username:    wttree
 # Build settings
 highlighter: pygments
 permalink: pretty
-paginate: 20
+paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-anchorjs: true      # if you want to customize anchor. check out line:129 of `post.html`
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+
 
 # Markdown settings
 # replace redcarpet to kramdown,
@@ -27,31 +30,40 @@ anchorjs: true      # if you want to customize anchor. check out line:129 of `po
 # document: http://jekyllrb.com/docs/configuration/#kramdown
 markdown: kramdown
 kramdown:
-  input: GFM        # use Github Flavored Markdown !important
+  input: GFM                            # use Github Flavored Markdown !important
 
+
+
+# Disqus settings
+#disqus_username: _your_disqus_short_name_
 
 # Duoshuo settings
-# please set your own DuoShuo account in `post.html` and `about.html`
-useDuoshuo: true    # use both Comment and Share
-useShare: false      # use Comment only. seeing the Share component is depend on Comment so we can NOT use share only.
-
-
 duoshuo_username: wttree
 # Share component is depend on Comment so we can NOT use share only.
+duoshuo_share: true                     # set to false if you want to use Comment without Sharing
 
 
-# Todo: Analysis settings
-# Please set your own analysis account in `head.html`(Baidu) and `default.html`(QQ)
-useBaiduAnalysis: true
-useTencentAnalysis: true
-useGoogleAnalysis: true     # TODO
+
+
+# Analytics settings
+# Baidu Analytics
+ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
+# Google Analytics
+ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
+ga_domain: huangxuan.me
+
 
 
 # Sidebar settings
-sidebar: true
-sidebar-featured-tags: true
+sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "喵了个咪的"
-sidebar-avatar: /img/avatar-wttree.jpg     # use absolute URL.
+sidebar-avatar: /img/avatar-wttree.jpg     # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
 
 # Friends
 friends: [
