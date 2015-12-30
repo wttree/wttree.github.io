@@ -12,7 +12,7 @@ tags:
 
 
 ##移动搜索chunked项目总结
-<small>created by mengdesen@baidu.com, 2013-12-23 </small>
+
 ###chunked项目Timeline
 
 [点此进入Timeline](http://firstshare.duapp.com/chunked/)

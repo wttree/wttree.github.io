@@ -12,7 +12,7 @@ tags:
 
 
 # Wise中同native app通信和组件使用说明
-<small>by liuji, <del>zhuangxiaoming</del><small>
+
 
 ------------------
 

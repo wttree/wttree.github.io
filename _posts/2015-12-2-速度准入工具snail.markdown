@@ -13,7 +13,6 @@ tags:
 
 # 速度准入工具Snail
 
-<small>created by mengdesen@baidu.com, 2013-08-23 </small>
 
  >Snail(蜗牛)是一款基于Node.js、跨平台的限速代理工具。配合chrome插件可以实现模拟移动速度并自动生成速度测试报告。
 
