@@ -1,0 +1,240 @@
+*{padding:0px;margin:0px;}
+body{line-height:130%;font-size:14px;-webkit-text-size-adjust:none; font-family:Arial, Helvetica, sans-serif;}
+img{border:0}
+a{color:#0000CC;}
+.atext{color:#0000CC;font-size:120%;}
+/*a:visited {color:#551A8B;}*/
+
+	
+.keyword,.keyword a{color:#c60a00;}
+a em{text-decoration:underline;}
+a font{text-decoration:underline;}
+em{font-style:normal;color:#C60A00;}
+
+.l,.r{padding-left:6px;padding-right:6px;}
+.l,.left{text-align:left;}
+.r,.right{text-align:right;}
+.c,.center{text-align:center;}
+.fullwidth{width:100%;}
+.highlight,.highlight *,.red,.red *, .new{color:#CC0000;}
+.nochange,.black{color:#000000}
+.green{color:#008000}
+.hide{display:none}
+.b{font-weight:bold}
+
+.adv3{background-color:#F5F5F5;padding:20px 2px;text-align:left;}
+
+.search-form{
+    padding: 5px 5px 7px 5px;
+	border-bottom:1px solid #82a7e8;
+	
+    background: -webkit-gradient(linear, 0% 0%, 0% 60%, from(#D2E1FF), to(#B5CFFF), color-stop(.4,#C7DAFF));
+    background: -moz-linear-gradient(#d2e1ff, #c7daff 40%, #b5cfff);
+
+	height:30px;
+}
+.bf{
+	background:none;
+	border-bottom:none;
+}
+.search-box{
+	position:relative;height:30px;background-color:#FFFFFF;
+    -moz-border-radius:4px;  
+    -webkit-border-radius:4px;	
+}
+.search-box-shadow{
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#CCC), to(rgba(128, 128, 128, 0)));
+	background: -moz-linear-gradient(top center,#CCC 0%,white 100%);
+	height:2px;
+}
+.search-input-wrap{margin-right:66px;
+    -moz-border-radius-topleft:4px;  
+    -moz-border-radius-bottomleft:4px;  
+    -webkit-border-top-left-radius:4px;
+    -webkit-border-bottom-left-radius:4px;
+    border:1px solid #7fa5e8;
+    border-right:none;
+    height:100%;
+	background-color:white;
+	-moz-box-shadow:inset 0 2px 2px #DAE0E6;
+	-webkit-box-shadow:inset 0 2px 2px  #DAE0E6;
+	box-shadow: inset 0 2px 2px #DAE0E6;
+}
+.search-input-wrap-underline
+{
+    background-color: #c3d8ff;
+    margin-left: 3px;
+    margin-right: 3px;
+    height: 1px;
+}
+.search-input-inner{
+	padding-left:2px;padding-right:35px;
+	background:transparent;
+
+}
+.android .search-input-inner{padding-left:2px;padding-right:5px;}
+.search-input{width:100%;border:none;
+    background:transparent;
+    font-size:18px;
+    padding:4px 0px;
+}
+.search-button{position:absolute;top:0px;right:0px;
+    height:30px;
+    border:1px solid #7FA5E8;
+    -moz-border-radius-topright:4px;  
+    -moz-border-radius-bottomright:4px;  
+    -webkit-border-top-right-radius:4px;
+    -webkit-border-bottom-right-radius:4px;
+    font-size:16px;
+    text-align:center;
+    cursor:default;
+    color:#203ea0;
+    font-weight:bold;
+    line-height:30px;
+
+
+	
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#EDF3FF), to(#d4e2ff)); 
+
+	background: -moz-linear-gradient(#edf3ff, #d4e2ff);
+
+
+}
+.search-input-del{position:absolute;width:35px;height:30px;top:0px;right:70px;display:none;
+    background:url("http://m.baidu.com/static/index/iphone/wapindex-iphone-input-del.gif") no-repeat center;
+}
+.android .search-input{}
+
+.iphone .search-input{-webkit-appearance:searchfield;}
+
+.suggest-wrap{}
+.suggest-div{
+	position:absolute;
+	left:0px;top:33px;
+	border:1px solid #64A6EE;
+	width:98%;
+	background:#FFFFFF;
+    -moz-border-radius:4px;  
+    -webkit-border-radius:4px;
+    z-index:100;
+}
+
+.suggest-close{position:absolute;right:5px;bottom:0px;text-align:center;color:#282828;
+    text-decoration:underline;font-size:13px;line-height:30px;
+}
+.suggest-title {color:#00C;font-size:13px;line-height:30px; text-decoration:underline;width:100%;height:30px;
+    -webkit-border-top-right-radius:3px;
+    -webkit-border-top-left-radius:3px;
+}
+.suggest-content{}
+.history-item,.suggest-item{line-height:30px;border-bottom:1px solid #CCCCCC;font-size:15px;color:#555555;}
+.suggest-item-last{border-bottom:none;}
+.history-item,.suggest-title, .suggest-item{padding-left:5px;padding-right:5px;}
+.history-item b,.suggest-item b{font-weight:bold;font-style:normal;color:#000000;}
+.history-item em.suggest-item em{font-weight:bold;font-style:normal;color:#000000;}
+
+.search-mark {float:right;color:#909090;font-size:13px;}
+
+
+.nav{border-bottom:1px solid #e6eefe;padding-top:8px;padding-bottom:0px; font-size:14px;}
+.nav_i{border-bottom:1px solid #92C4FA;height:32px;}
+.nav_i a,.nav_i b{
+	display:inline-block;
+}
+.nav_i a{padding-left:6px;padding-right:6px;}
+.nav_i a:visited{color:#0000CC;}
+.nav_i b{
+    -moz-border-radius:3px 3px 0px 0px;
+    -webkit-border-radius:3px 3px 0px 0px;
+
+    background: -moz-linear-gradient(#e2ecfe, #d2e1ff 20%, #d2e1ff);
+    background: -webkit-gradient(linear, 0% 0%, 0% 20%, from(#E2ECFE), to(#d2e1ff));
+ 
+    padding: 3px 4px 8px 4px;
+	position:relative;
+}
+#nav_i_out{
+    -moz-border-radius:4px 4px 0px 0px;
+    -webkit-border-radius:4px 4px 0px 0px;
+ 
+    padding: 6px 1px 7px 1px;
+    background-color: #93b8fa; 
+    position:relative;
+}
+#nav_i_inner{
+    -moz-border-radius:3px 3px 0px 0px;
+    -webkit-border-radius:3px 3px 0px 0px;
+    padding: 5px 1px 8px 1px;
+    background-color: #f2f6fe;  
+    position:relative;
+}
+.nav_i .logo{
+	padding-top:8px;
+	width:70px;height:24px;
+	text-decoration:none;
+	color:rgba(255,255,255,0);
+	background:url('http://m.baidu.com/static/search/iphone/iphone-logo-74-24.gif') no-repeat;
+	text-indent:-600px;
+}
+
+#get_more_link{
+	padding-right:10px;
+}
+.more_link_up{
+	background:url(http://m.baidu.com/static/search/iphone/more-arrowup.gif) no-repeat right center ;
+}
+.more_link_down{
+	background:url(http://m.baidu.com/static/search/iphone/more-arrow.gif) no-repeat right center ;
+}
+#more_links{
+	position:absolute;
+    left:246px;
+	top:40px;
+	display:block;
+	border:1px solid #64A6EE;
+    -moz-border-radius: 0px 0px 4px 4px;
+    -webkit-border-radius:0px 0px 4px 4px;
+	/*
+    -moz-border-radius-topright:0;  
+    -webkit-border-top-right-radius:0;
+    -moz-border-radius-topleft:0;  
+    -webkit-border-top-left-radius:0;	
+	*/
+	background:white;
+	z-index:10000;
+    width:70px;
+	-moz-box-shadow: 2px 2px 2px #AAA;
+	-webkit-box-shadow: 2px 2px 2px #AAA;
+	box-shadow: 2px 2px 2px #AAA;
+
+}
+
+#more_links a{
+	display:block;
+    text-align:left;
+    height:34px;
+    line-height:34px;
+	border-bottom:1px solid #CCCCCC;
+	text-decoration:none;
+}
+
+#more_links a:last-child{
+	border-bottom:none;
+}
+
+
+
+
+.nav-bottom{padding-top:13px;}
+.nav-bottom a,.nav-bottom b{display:inline-block;line-height:28px;margin-right:5px;margin-left:5px;}
+
+#relativewords{text-align:left;padding:15px 5px 15px 5px;background-color:#EFF2FA;border-width:1px 0;border-color:#c9e0f6;border-style:solid;margin-bottom:8px;
+}
+.relativewords_title{font-size:120%;}
+.relativeword{display:inline-block;width:144px;height:14px;line-height:130%;padding:10px 5px 8px 0px;overflow:hidden;}
+
+#copy{font-size:80%;color:#7777CC;padding:5px;padding-bottom:15px;text-align:center;}
+#copy span{color:#666666;}
+#copy a{color:#7777CC;margin-left:5px;}
+
+.return-link{padding: 8px 5px 5px 5px;}

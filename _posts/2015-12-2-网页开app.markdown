@@ -1,0 +1,321 @@
+---
+layout:     post
+title:      "网页同native app通信和组件使用说明"
+subtitle:   "网页同native app通信和组件使用说明"
+date:       2015-11-10
+author:     "wttree"
+header-img: "img/post-bg-e2e-ux.jpg"
+tags:
+    - nodePPT
+    - nodejs
+---
+
+
+# Wise中同native app通信和组件使用说明
+<small>by liuji, <del>zhuangxiaoming</del><small>
+
+------------------
+
+## 背景
+
+-----------------
+
+让web具有通过moplus(sdk)调起Native Apps的能力
+
+## 流程图
+
+----------------
+
+![流程图](./wiki/inapp/openapp/docs/diagrams.png)
+
+## 资料
+
+----------------
+
+调起依赖于moplus ，其文档可参照[http://wiki.babel.baidu.com/twiki/bin/view/MI/Main/PushService](http://wiki.babel.baidu.com/twiki/bin/view/MI/Main/PushService)和[http://wiki.babel.baidu.com/twiki/bin/view/Com/CloudOS/Moplus](http://wiki.babel.baidu.com/twiki/bin/view/Com/CloudOS/Moplus)
+
+## 组件
+
+--------------
+
+组件中已经处理流程中的一些细节问题，让你能方面使用，这里是[SVN](http://fe.baidu.com/repos/projects/moplus-inapp)。
+
+    http://fe.baidu.com/repos/projects/moplus-inapp
+
+已经更新到UI 3.0版本，旧版本不再维护，请尽快迁移。
+
+SVN目前使用的是fe.baidu.com的SVN，后续会考虑迁移到公司SCM上。
+
+线上引用地址：
+
+    http://m.baidu.com/static/search/inapp/lib/openapp-v3-min.js
+
+## 示例
+
+-------------
+
+### 效果预览
+
+![效果预览](./wiki/inapp/openapp/docs/screenshot.png)
+
+可以直接使用此代码，因为在wise中可能会有多个阿拉丁使用该组件。目前临时方法使用异步加载避免重复加载
+
+    A.init(function(){
+        function openAppRender() {
+            $('#J_OpenBaiduIknow').on('click', function(e){
+                e.preventDefault();
+                $.openapp({
+                    packageName: 'com.baidu.iknow',
+                    openAppUri: '#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10000000;component=com.baidu.iknow/.ui.QuestionBrowserV2Activity;l.qid=123456;S.launcher_from=aladdin;end',
+                    appIcon: 'http://m.baidu.com/static/search/weizhan/bd.png',
+                    popupTitleText: '用手机百度提问',
+                    popupHeaderText: '有人应答立即知(免登录)',
+                    downloadedPopupHeaderText: '你可能已下载手机百度',
+                    downloadedPopupBodyText: '请手动安装或再次下载',
+                    buttonText: {
+                        download: '下载手机百度',
+                        cancel: '继续访问网页'
+                    },
+                    cancelUrl: 'http://zhidao.baidu.com/m......'
+                });
+            });
+        }
+
+        var script = document.createElement('script');
+        script.src = "http://m.baidu.com/static/search/inapp/lib/openapp-v3-min.js?t=20140101";
+        script.onload = openAppRender;
+        $('head').append(script);
+    });
+
+
+## 插件配置选项说明
+
+---------------
+
+### 调起基本参数
+
+`packageName` _String_ || _function([trigger])_  
+    
+    app 的 packageName的名称，同时在window.app 和 localStorge 中都有它，用来保存app 状态。也会根据packagename去open请求最新app版本信息和下载地址。接口目前放在open/inapp模块下,对as的接口做了二次封装
+
+`openAppUri` _String_ || _function([trigger])_  
+
+    app 注册的intent地址，可包含相关action等
+
+`minVersion` _String_
+
+    （可选）传入此参数时，如'4.4.2'将进行客户端版本验证，如不满足条件 {当前版本} >= {minVersion}，则会触发错误回调
+
+`checkVersion` _Function_
+
+    （可选）函数签名：function(ok, fail) 传入此参数时，会在sendintent之前插入版本检查逻辑，调用此函数。
+    此函数内需要进行检查，成功时，调用ok(); 失败时，调用fail(); 组件会根据调用继续进行下一步操作（调起应用或弹窗）。
+    有此参数时，minVersion参数将被忽略。
+
+### 文案定制参数
+
+`appIcon` _String_ || _Function([trigger])_
+
+    （可选）应用图标
+    不指定时，显示无图标样式（文案居中）
+
+`popupTitleText` _String_ || _Function([trigger])_
+
+    弹出框第一行文案
+
+`popupHeaderText` _String_ || _Function([trigger])_  
+
+    弹出框第二行文案
+
+`downloadedPopupHeaderText` _String_ || _Function([trigger])_
+
+    点击过下载按钮，弹出框第一行文案
+
+`downloadedPopupBodyText` _String_ || _Function([trigger])_
+
+    点击过下载按钮，弹出框第二行文案
+
+`buttonText` _Object_
+
+    弹框按钮文案
+    新接口：默认为{download:'确定下载', cancel:'继续访问网页'}
+
+`cancelUrl` _String_
+
+    （可选）取消时跳转URL
+    不指定时，则不显示“继续访问网页”按钮
+
+`appInfo` _Object_ 
+
+    （可选）自定义对应app相关信息，如果不指定则会根据packageName自动去App Search的接口获取最新版本。自定义格式约定为
+    {"download":"http://baidu.com","size":"12.5M","rawsize":"13096975","version":"5.1.1","date":"2013-09-30"}
+
+`appInfoTextShort` _String_
+
+    （可选）App下载信息文案自定义，默认值为 '（{size}）'，将会被添加到下载按钮上
+    其中{version}和{size}等占位符将会被替换为appInfo中的实际值
+
+`lowVersionPopupHeaderText` _String_
+
+    （可选）对版本有要求时生效，当检测版本不符合时，此值会覆盖popupHeaderText和downloadedPopupHeaderText。
+
+`lowVersionPopupBodyText` _String_
+
+    （可选）对版本有要求时生效，当检测版本不符合时，此值会覆盖downloadedPopupBodyText。
+
+### 可编程回调函数
+
+`clickNext` _Function[trigger]_
+
+    （可选）点击调起之后执行的回调
+
+`downloadNext` _Function[trigger]_
+
+    （可选）点击“下载”后执行的回调
+
+`cancelNext` _Function[trigger]_
+
+    （可选）点击“继续访问网页”后执行的回调
+
+`closeNext` _Function[trigger]_
+
+    （可选）点击“返回搜索结果”或右上角叉叉关闭后执行的回调
+
+`popupNext` _Function[trigger]_
+
+    （可选）弹框显示之后执行的回调
+
+`openAppNext` _Function[trigger]_
+
+    （可选）打开app后执行的回调
+
+`checkError` _Function_
+
+    （可选）检查探测没有安装app后动作，默认是显示弹框。
+
+### 统计相关参数
+
+`clkFrom` _String_
+    
+    （可选）点击统计来源维度参数
+
+`clkParams` _Object_
+
+    （可选）点击统计自定义参数，clkFrom为空时，clkParams无效
+
+### 部分重要参数图例
+
+![概述](./wiki/inapp/openapp/docs/openapp_p1.jpg)
+
+![按钮](./wiki/inapp/openapp/docs/openapp_p2.jpg)
+
+## 统计
+
+---------------
+
+浮层内部的按钮可以有自动的**点击统计**
+
+按照**非结果非搜索**类型进行统计
+
+传递`clkFrom`参数不为空时，开启自动统计
+
+固定参数：
+
+* ct=4, cst=1
+
+* 点击位置clk_info=[1|2|3]，具体取值参考下图：
+
+  ![按钮对照图](./wiki/inapp/openapp/docs/openapp_p3.jpg)
+
+* 多维度统计
+
+  > 应用维度：package=xxxxx（必选，packageName参数）
+  >
+  > 来源维度：clk_from=xxxxx（必选，如阿拉丁资源号等）
+  >
+  > 自定义维度：遍历传入配置项中clkParams的所有K-V
+
+调用样例：
+
+    $('button').openapp({
+        // ... 其他各种原来的参数
+        packageName: 'com.baidu.searchbox', // 原有参数，依然必选
+        clkFrom: 'sigma_movie', // 传clkFrom，开启点击统计
+        clkParams: {
+            pos: 'l1' // 这只是一个例子，按照你的需要，clkParams可以是任意K-V结构，它会被遍历添加在统计请求里
+        }
+    });
+
+如上代码生成：
+
+    B.log.send({
+        ct: '4',
+        cst: '1',
+        package: 'com.baidu.searchbox', // 调起应用维度
+        clk_info: 'h_l1', // 根据点击的按钮而不同
+        clk_from: 'sigma_movie', // 调起来源/资源维度
+        pos: 'l1' // 自定义维度
+    });
+
+即可达到统计目的。（完整统计参数请参阅[《非搜索非结果点击密码手册》](http://ws.baidu.com/#/流程与规范/数据规范/搜索点击参数/非结果非搜索点击参数规范)）
+
+## App调起功能自测
+
+----------------
+
+具有被调起能力的App可以访问自测工具 [http://test.m.baidu.com/inapp](http://test.m.baidu.com/inapp)
+填写Intent字符串可以测试你的App是否能正确被调起
+
+## Show Case
+
+----------------
+
+使用Android UA 访问
+
+* 视频（因UI升级，调起功能暂时下线）
+
+    query：还珠格格
+
+* 微站
+
+    query：北京租房
+
+* 翻译
+
+    query：汉译英
+
+* 知道
+
+    query：孕妇什么时候
+
+## 其他
+
+---------------
+
+1. 当用户网关为cmwap使用，该组件无效，因为会把127.0.0.1也代理过
+2. 访问[这个测试页面](http://liuji.fe.baidu.com/jsplay/moplus/test.html)可以使用手机自测moplus各种接口是否正常
+
+## Changelog
+
+---------------
+
+**20140103**
+
+> 新年新气象！UI 3.0版本全面升级！
+>
+> 重新提供了一组样例代码，仅推荐实时调起一种用法
+>
+> 大面积更新参数文档，已废弃（仅兼容）的接口不再列进参数列表里。
+>
+> 给重要参数提供了图文对照。
+
+**20131126**
+
+> 有SVN了（终于）
+
+**20131012**
+
+> 逻辑拆分，提供非绑定接口，原自动绑定改为通过此接口实现。
+>
+> 增加低版本时定制文案接口。
+

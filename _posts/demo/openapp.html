@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+  <title>open native app</title>
+  <script src="zepto.js" type="text/javascript"></script>
+  <script src="../lib/openapp.js" type="text/javascript"></script>
+  <link media="all" rel="stylesheet" href="reset.css" type="text/css" />
+  <style type="text/css">
+     #demo a {
+          font-size: 30px;
+          padding: 20px;
+          display:block;
+      }
+
+  </style>
+</head>
+<body>
+    <br />
+   <div id="demo">
+    <a href="http://www.zhikan.com/vod40989.html" data-target="baidu-player" class="t">嘻嘻</a>
+    <a href="http://www.zhikan.com/vod40989.html" class="t">呵呵</a>
+    <a href="http://www.baidu.com/" >么么哒</a>
+
+   </div> 
+  
+    <script type="text/javascript">
+    (function(){
+        $('a.t').openapp({
+            packageName:'com.tencent.mobileqq',
+            openAppUri:"http://localhost:9081/?url=aa",
+            popupHeaderText:'这类文件需要',
+            popupAgainHeaderText: '您可能已经下载了最新版',
+            popupAgainBodyText: '请手动安装并开启, 即可使用'
+        })
+    }())
+
+    </script>
+    <script type="text/javascript">
+        $('body').append($('<a class="t" />').text('aaa'))
+    </script>
+</body>
+</html>

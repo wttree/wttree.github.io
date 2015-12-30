@@ -1,0 +1,165 @@
+---
+layout:     post
+title:      "移动搜索chunked项目总结"
+subtitle:   "移动搜索chunked项目总结"
+date:       2015-11-10
+author:     "wttree"
+header-img: "img/post-bg-e2e-ux.jpg"
+tags:
+    - nodePPT
+    - nodejs
+---
+
+
+##移动搜索chunked项目总结
+<small>created by mengdesen@baidu.com, 2013-12-23 </small>
+###chunked项目Timeline
+
+[点此进入Timeline](http://firstshare.duapp.com/chunked/)
+
+###什么是chunked编码
+>分块传输编码（Chunked transfer encoding）是超文本传输协议（HTTP）中的一种数据传输机制，允许HTTP由网页服务器发送给客户端应用（通常是网页浏览器）的数据可以分成多个部分。分块传输编码只在HTTP协议1.1版本（HTTP/1.1）中提供。
+
+>通常，HTTP应答消息中发送的数据是整个发送的，Content-Length消息头字段表示数据的长度。数据的长度很重要，因为客户端需要知道哪里是应答消息的结束，以及后续应答消息的开始。然而，使用分块传输编码，数据分解成一系列数据块，并以一个或多个块发送，这样服务器可以发送数据而不需要预先知道发送内容的总大小。通常数据块的大小是一致的，但也不总是这种情况。
+
+###利用chunked编码的优化案例
+####Bigpipe
+>bigpipe是由Facebook提出的前端加载技术，主要是为了解决重数据页面的加载速度问题。bigpipe就是利用chunked，让多个后端请求和前端渲染并行起来，对于依赖多个后端服务的页面，有非常有效的减速效果。
+
+###我们为什么要使用chunked
+>目前我们的后端很慢，平均大概有300-400ms，同时在手机浏览器上前端页面的渲染很慢，所以虽然移动搜索不是多个后端请求，但是让不依赖后端的模板渲染和后端请求并行起来，可以有效提高首屏速度。
+
+###chunked开发详细介绍
+与chunked开发相关的逻辑，其实很简单，这次移动搜索改动很大，是因为让原有架构支持chunked，需要做很多改变。
+
+>php 实现 bigpipe
+
+
+
+    <!doctype>
+    <html>
+    <head>
+	    <meta charset="utf-8" />
+	    <title>php实现BigPipe</title>
+    </head>
+    <style>
+    </style>
+    <body>
+	    <div class="wrapper">
+		    <hr>
+		    <div class="section" id="con1">内容1，正在加载……</div>
+		    <hr>
+		    <div class="section" id="con2">内容2，正在加载……</div>
+		    <hr>
+		    <div class="section" id="con3">内容3，正在加载……</div>
+		    <hr>
+	    </div>
+	    <?php
+		    /*
+		     * 输出缓存区，将代码下发到浏览器
+		     */
+		    function flush_now(){
+			    ob_flush();
+			    flush();
+		    }
+		    flush_now();
+	    ?>
+	    <?php sleep(2);?>
+		    <script>
+			    document.getElementById("con1").innerHTML="====内容1====";
+		    </script>
+	    <?php flush_now()?>
+     
+	    <?php sleep(2);?>
+		    <script>
+			    document.getElementById("con2").innerHTML="====内容2====";
+		    </script>
+	    <?php flush_now()?>
+ 
+	    <?php sleep(2);?>
+		    <script>
+			    document.getElementById("con3").innerHTML="====内容3====";
+		    </script>
+	    <?php flush_now()?>
+    </body>
+    </html>
+
+
+
+>移动搜索chunked代码
+
+
+
+    //非chunked模式
+    //只渲染一次模板
+    $this->getView()->display($arrPageInfo['data']['tplPath'], $arrPageInfo['data']['tplVars']);
+    
+    //chunked模式，收到请求后，先渲染头部模板，然后通过输出缓存区，下发到浏览器
+    $_template->display($arrResult['data']['headPath'],$_headData);
+    //下发head模板
+    ob_flush();
+    flush();
+    //请求后端后，再渲染其余部分
+    $this->getView()->display($arrPageInfo['data']['tplPath'], $arrPageInfo['data']['tplVars']);
+
+
+
+###为何没有使用bigpipe的方式
+
+  因为移动搜索只有一个后端请求（实际上有两个后端，这两个后端并行请求，串行返回，所以请求只有一个），另外我们有多个版式，有些版式是不支持javascript的，所以我们没有使用bigpipe的方式，而是使用普通的chunked下发。
+  
+  `优点`：
+  
+   * 开发相对简单，渲染机制和之前一样，前端不需要使用javascript
+   * 兼容性好，可以扩展到移动搜索多个版式
+  
+`缺点`：
+
+*  每个版式都需要维护两个模板
+*  其他版式扩展还有一些开发工作
+
+###对现有开发的改变
+>1: pageservice - **WwwUs.php**
+
+
+
+    //增加设置渲染头部所需数据的函数，后面如果有需要在头部模板使用的变量在这里添加
+       public function _executeHead($arrParams,$tplPath,$arrResult){
+            $_template = new Search_Template();
+            //准备head所需数据
+            $_headData = array();
+            //如果是头部所需的page变量，在_setHeadPageData里面添加
+            $_headData['page'] = $this->_setHeadPageData($arrParams,$tplPath);
+            $_headData['req'] = $arrParams['query'];
+            $_headData['srv'] = $arrParams['wiaui'];
+            $_headData['cust'] = $arrParams['cust'];
+            $_headData['tpl'] = $arrResult['data']['tplVars']['tpl'];//传递父模板参数
+            if($arrResult['chunked']){
+	    		//渲染head模板
+                $_template->display($arrResult['data']['headPath'],$_headData);
+                //下发head模板
+                ob_flush();
+                flush();
+            }
+            return $_headData;
+        }
+
+
+
+>2: 模板拆分
+
+把模板iphone.tpl拆成了iphone_head.tpl和iphone.tpl
+
+>3:其他
+编译脚本、trimall、错误处理部分同步升级
+
+
+
+
+
+
+
+
+
+
+   
