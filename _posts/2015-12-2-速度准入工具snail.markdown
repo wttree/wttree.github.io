@@ -1,0 +1,103 @@
+---
+layout:     post
+title:      "速度准入工具Snail"
+subtitle:   "snail"
+date:       2015-11-10
+author:     "wttree"
+header-img: "img/post-bg-2015.jpg"
+tags:
+    - nodePPT
+    - nodejs
+---
+
+
+# 速度准入工具Snail
+
+<small>created by mengdesen@baidu.com, 2013-08-23 </small>
+
+ >Snail(蜗牛)是一款基于Node.js、跨平台的限速代理工具。配合chrome插件可以实现模拟移动速度并自动生成速度测试报告。
+
+<div style="margin-top: 30px;"></div> 
+
+##1.安装Node.js
+
+<a href="http://boke.us/2013/08/09/Node.js%E5%AE%89%E8%A3%85/" target="_blank">Node.js安装教程</a>
+
+##2.Snail使用
+
+###特点
+- 仅需一道命令
+- 兼容于Windows,Mac,Linux
+- 配合Chrome插件，自动生成百度移动搜索速度报告
+
+###安装
+```
+npm install -g snail
+```
+###更新
+```
+npm update -g snail
+```
+###开始
+- 模拟3G网速 
+
+```
+snail 3g
+```
+
+- 模拟2G网速
+
+```
+snail 2g
+```
+
+- 模拟自定义网速
+
+```
+snail 160 170 400 8080
+```
+这行命令表示
+
+* 下行网速=160 kbps
+* 上行网速=160 kbps
+* 延迟=400ms
+* 代理端口号=8080
+
+###默认值
+- 2G snail 80 80 800 9105
+- 3G snail 160 160 400 9105
+
+
+##3.Snail插件
+
+###插件下载
+<a href="http://wiki.babel.baidu.com/twiki/bin/view/Com/Test/WISE-SE-QA-ZHILIANGBIAOZHUN" target="_blank">插件下载地址</a>
+在页面最下面附件部分找到snial.crx,鼠标右键存储为，保存到电脑本地
+
+###插件安装
+* 下载扩展程序文件，然后将该文件保存到您的计算机中。 
+* 点击浏览器工具栏上的 Chrome 菜单图标 Chrome menu。
+* 依次选择工具 > 扩展程序。
+* 找到您计算机上的扩展程序文件，然后将该文件拖至“扩展程序”页面。
+* 在显示的对话框中查看权限列表。如果您想继续，请点击安装。
+
+###插件使用
+* 启动snail代理,   命令行执行 snail 2g  或 snail 3g (根据测速要求)
+* 打开chrome浏览器,  设置好userAgent, 访问baidu首页,  搜索所需的query
+* 点开地址栏右侧snail的按钮(百度图标),   设置好代理, 测试页面选择为”当前页面”, 开始测试
+* 此期间插件会对自动执行,  测试完成后新建一个页面, 显示测试结果
+* 再点开插件,  选择测试页面为” 2g” 或 “3g”, 其它不用修改, 再执行测试
+* 将测试结果与基准结果进行比对
+
+##4.速度质量标准
+<a href="http://wiki.babel.baidu.com/twiki/bin/view/Com/Test/WISE-SE-QA-ZHILIANGBIAOZHUN" target="_blank">速度质量标准</a>
+
+<div style="margin-top: 30px;"></div>
+##还有问题...
+
+如还有问题，可以咨询[孟德森](mailto:mengdesen@baidu.com)和[刘晨](mailto:chenliu@baidu.com)
+
+
+
+
+
