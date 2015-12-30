@@ -5,90 +5,106 @@ description: "Hey, Me."
 header-img: "img/about-bg.jpg"
 ---
 
-<!-- Language Selector -->
-<select onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
-    <option value="0" selected> 中文 Chinese </option>
-    <option value="1"> 英语 English </option>
-</select>
 
-<!-- Chinese Version -->
-<div class="zh">
-    <blockquote>
-        我热爱生活
-    </blockquote>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head profile="http://gmpg.org/xfn/11">
+<style>
+#header_box,.nav {width:62.5%; margin:0 auto; max-width:800px;}
+/*Menu*/
+#menu {background-color:#fafafa; font-size:1em; line-height:3.5em; height:3.5em; margin-bottom:0em; border-bottom:1px solid #ccc; z-index:-1;
+    background-image:-webkit-linear-gradient(#fff,#eee);
+    background-image:-moz-linear-gradient(#fff,#eee);
+    background-image:-ms-linear-gradient(#fff,#eee);
+    background-image:-o-linear-gradient(#fff,#eee);
+    background-image:linear-gradient(#fff,#eee);
+    box-shadow:inset 0 -1px 0 #fafafa,0 1px 3px #ccc;
+}
+#menu li {float:left; margin-right:3.5%; position:relative;}
+#menu a {display:block; text-decoration:none; color:#aaa; text-align:center; text-shadow:1px 1px #fff;}
+#menu a:hover {color:#888;}
+#menu .current-menu-item a,#menu .current-menu-parent a {background:url(images/nav_hover.png) no-repeat center -4px; color:#666;}
+.sub-menu {display:none;}
+ol, ul {
+    list-style: none;
+}
+body {
 
-    <b>吴桐 [wú tóng] </b>
-<p>梧桐，落叶乔木，高1.93米。爱生活，爱coding，喜欢主导，善于协调。<p>
-<p>2010-2014，百度 移动•云事业部 无线搜索 PHP 高级研发工程师 。<p>
-<p>2014-today，微博 资深研发攻城诗 。<p>
-<p>形态特征<p>
+    font-family: "Helvetica Neue", "Microsoft Yahei", Arial, Verdana, sans-serif;
+}
+</style>
+</head>
 
-    <hr>
-    附上一年前给鸟哥@Laruence的简历:
-    <ul class="active-list">
-        <li><a href="{{site.baseUrl}}/attach/wutong.doc">吴桐 [wú tóng] </a></li>
-    </ul>
+<body>
 
+
+<nav id="menu"><ul id="menu-%e8%8f%9c%e5%8d%951" class="nav"><li id="menu-item-50" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-50"><a href="https://wttree.github.io">首页</a></li>
+<li id="menu-item-107" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-104 current_page_item menu-item-107"><a href="http://wttree.sinaapp.com/me">个人简介</a></li>
+<li id="menu-item-107" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-104 current_page_item menu-item-107"><a href="http://wttree.sinaapp.com/wiki">Wiki</a></li>
+</ul></nav>
+
+<div id="header" style="padding: 10px 100px;">
+	
+	<article id="post_content">
+
+				<p><span style="color: #339966;"><strong>################################################</strong></span></p>
+				<p><span style="color: #339966;"><strong># 吴桐个人简历 #</strong></span></p>
+				<p><span style="color: #339966;"><strong>################################################</strong></span></p>
+				<p><span style="color: #339966;"><strong>[.工作经历]</strong></span></p>
+				<p>2010.1 至今 :     百度  移动•云计算事业部  PHP  高级研发工程师</p>
+				<p>2009.1 &#8211; 2010.1 :     新浪产品部php工程师</p>
+				<p><strong><span style="color: #339966;">[.基本信息]</span></strong></p>
+				<p>姓名 : 吴桐     电话 : 15901029581     教育经历 : 中国矿业大学</p>
+				<p>邮箱 : wttree@qq.com     爱生活，爱codding，喜欢主导，善于协调，执行力。</p>
+				<p>blog ：<a href="/">http://wutong.duapp.com</a></p>
+				<p><strong><span style="color: #339966;">[.工作职责]</span></strong></p>
+				<p><strong><span style="color: #339966;">[..UI层架构负责人 带领5人]</span></strong></p>
+				<blockquote><p>背景: 1．可测性低，调用关系复杂。2.全公司的通用服务及扩展不足。3.缓存的清理和维护成本高，易出错。4.模版服务版本低等因素逐渐显现。<br />
+				解决方式: UI架构重构<br />
+				收益：重构无线搜索架构，CPU平均idle ↑10%；php-cgi cpu占用 ↓20%，提高可测性，升级模板引擎，为前端UI提供高效的开发模式、清晰的服务架构、稳定的服务体验。</p></blockquote>
+				<blockquote><p>相关文档:《无线搜索UI层架构迁移详细设计文档》《ODP调研》《Smarty3性能调研》</p></blockquote>
+				<blockquote><p>背景：无线阿拉丁资源多依靠ps数据，数据通路的打通有益引入更多资源，并且需要机制使ps fe的介入，可以极大提高阿拉丁的开发速度。<br />
+				解决方式：阿拉丁架构升级<br />
+				收益：打通wise、ps合作开发无线阿拉丁模式。同时带领同学打通ps资源通路，为无线搜索方便引入格式化、知心、微博等资源起到了保障。</p></blockquote>
+				<blockquote><p>相关文档：《无线开放阿拉丁迁移和通路优化》《无线搜索阿拉丁前端架构设计》</p></blockquote>
+				<p><strong><span style="color: #339966;">[..快速开发TOPIC负责人 带领团队5人]</span></strong></p>
+				<blockquote><p>背景：缺乏开发上线流程，使前端敏捷无法推进，急需开展对RD PM QA OP的联动及培训。<br />
+				解决方式：1.持续交付培训 2.持续交付提测平台。3.icafe、jenkins联动程序 4.自动建立项目程序 5、邮件提醒脚本 6、日志校验程序<br />
+				收益：通过编写平台、规范流程、发起培训，实现了：1.上线自动化。2.提测自动化。3.case覆盖率 阿拉丁100% UIBaseLine 100% 4.拒绝无story的需求上线 5.拒绝无case的story上线。6.规范紧急需求。</p></blockquote>
+				<blockquote><p>相关文档：《搜索自动化case校验文档》《无搜索前端持续交付开发、测试、上线流程》《搜索环境搭建》</p></blockquote>
+				<p><strong><span style="color: #339966;">[..负责质量保证TOPIC 虚拟团队 3人]</span></strong></p>
+				<blockquote><p>背景：团队扩大后，代码质量问题显现，RD对代码质量附有第一责任。<br />
+				解决方式：无线搜索前端引入更适合前端测试的superjs进行自动化测试,覆盖阿拉丁、框、语音、OEM、统计参数，组织培训RD编写自动化case，开发自动化case覆盖率检测工具，同时为RD提供了编写自动化case环境及条件，改善了搜索质量。</p></blockquote>
+				<blockquote><p>相关文档：《搜索自动化case校验文档》《自动化case命名规范》《自动化case覆盖率检测工具》</p></blockquote>
+				<p><strong><span style="color: #339966;">[..无线搜索联盟负责人 团队3人]</span></strong></p>
+				<blockquote><p>OEM RD负责人，为无线搜索OEM结构提供支持，同时为BD PM 提供技术支持。【OEM重构】【搜索入口API】【dns定制】</p></blockquote>
+				<blockquote><p>《联盟申请方式及定制方案》《百度移动搜索联盟接口规范》《移动搜索OEM逻辑》</p></blockquote>
+				<p><strong><span style="color: #339966;">[..WEB调起APP负责人 带领3人]</span></strong></p>
+				<blockquote><p>背景：应用内搜索一期，搜索结果如何调用app，提升用户体验，如何搭建框架保证下发app正常。<br />
+				解决方式：应用内搜索一期<br />
+				收益：搜索结果直接调用百度地图APP，提升用户体验，摸清道路，为今后app列表通路、垂搜阿拉丁调起提供框架支持。</p></blockquote>
+				<p><code>相关文档：《框三期下发地图APP详细设计.doc》《视频APP详细设计.doc》《框下发阿拉丁APP方案及联调文档》</code></p>
+				<p>&nbsp;</p>
+				<p>工作思维导图：</p>
+
+				<a href="http://wttree.sinaapp.com/me/images/2012UI%E6%9E%B6%E6%9E%84TOPIC.jpeg"><img class="alignnone size-thumbnail wp-image-121" alt="快速开发、质量保证TOPIC" src="http://wttree.sinaapp.com/me/images/2012UI%E6%9E%B6%E6%9E%84TOPIC.jpeg" width="150" height="150" /></a>  				
+				
+				<a href="http://wttree.sinaapp.com/me/images/快速开发、质量保证TOPIC.jpeg"><img class="alignnone size-thumbnail wp-image-121" alt="快速开发、质量保证TOPIC" src="http://wttree.sinaapp.com/me/images/快速开发、质量保证TOPIC.jpeg" width="150" height="150" /></a>               
+				
+				<a href="http://wttree.sinaapp.com/me/images/OEM合作模式.jpeg"><img class="alignnone size-thumbnail wp-image-122" alt="OEM合作模式" src="http://wttree.sinaapp.com/me/images/OEM合作模式.jpeg" width="150" height="150" /></a></p>
+				<p>&nbsp;</p>
+
+				<p>&nbsp;</p>
+	</article>
 
 </div>
+<footer id="footer">
+	<aside id="footer_box">
+		<div id="sponsor">
+		</div>
+		<div id="linkcat"></div>
+	</aside>
 
-<!-- English Version -->
-<div class="en">
-    <blockquote>
-        Designer or Engineer, things in between.
-    </blockquote>
-
-    <b>吴桐 [wú tóng] </b>
-<p>梧桐，落叶乔木，高1.93米。爱生活，爱coding，喜欢主导，善于协调。<p>
-<p>2010-2014，百度 移动•云事业部 无线搜索 PHP 高级研发工程师 。<p>
-<p>2014-today，微博 资深研发攻城诗 。<p>
-<p>形态特征<p>
-
-    <hr>
-    Interested in more details? Just checkout my resumes:
-    <ul class="active-list">
-        <li><a href="{{site.baseUrl}}/attach/wutong.doc">吴桐 [wú tóng] </a></li>
-    </ul>
-
-
-</div>
-
-
-<!-- Handle Language Change -->
-<script type="text/javascript">
-    var $zh = document.querySelector(".zh");
-    var $en = document.querySelector(".en");
-    function onLanChange(index){
-        if(index == 0){
-            $zh.style.display = "block";
-            $en.style.display = "none";
-        }else{
-            $en.style.display = "block";
-            $zh.style.display = "none";
-        }
-    }
-    onLanChange(0);
-</script>
-
-
-{% if site.useDuoshuo %}
-<!-- 多说评论框 start -->
-    <div class="comment">
-        <div class="ds-thread" data-thread-key="{{page.id}}" data-title="{{page.title}}" data-url="{{site.url}}/about/"></div>
-    </div>
-<!-- 多说评论框 end -->
-
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"huxblog"};
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0]
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-</script>
-<!-- 多说公共JS代码 end -->
-{% endif %}
+</footer>
+</body>
+</html>
