@@ -6,8 +6,7 @@ date:       2015-11-10
 author:     "wttree"
 header-img: "img/post-bg-e2e-ux.jpg"
 tags:
-    - nodePPT
-    - nodejs
+    - HTML
 ---
 
 # HTML代码规范

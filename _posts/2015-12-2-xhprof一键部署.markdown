@@ -1,13 +1,12 @@
 ---
 layout:     post
-title:      "网页同native app通信和组件使用说明"
-subtitle:   "网页同native app通信和组件使用说明"
+title:      "xhprof一键部署"
+subtitle:   "xhprof一键部署"
 date:       2015-11-10
 author:     "wttree"
 header-img: "img/post-bg-e2e-ux.jpg"
 tags:
-    - nodePPT
-    - nodejs
+    - xhprof一键部署
 ---
 
 # xhprof一键部署
