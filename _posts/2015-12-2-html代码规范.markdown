@@ -1,0 +1,63 @@
+---
+layout:     post
+title:      "HTML代码规范"
+subtitle:   "HTML代码规范"
+date:       2015-11-10
+author:     "wttree"
+header-img: "img/post-bg-e2e-ux.jpg"
+tags:
+    - nodePPT
+    - nodejs
+---
+
+# HTML代码规范
+
+HTML是一种标记语言，它没有任何真正的编程语言中的循环或是流程控制语句。然而，HTML代码的格式和风格是非常重要的，因为要经常对HTML代码进行维护和修改，因此HTML代码必须有很清晰的逻辑结构和布局，而使其易懂和易于维护。
+
+### 1. 静态资源
+
+#### 1.1 <!DOCTYPE>声明
+     [强制] 适配高端机版式DOCTYPE声明为:<!DOCTYPE html>;
+     [强制] big.tpl、middle.tpl和utouch.tpl适配的版式声明为：
+     <!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+     [强制] 极简版声明为:
+     <!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.3//EN" "http://www.wapforum.org/DTD/wml13.dtd">
+
+#### 1.2 网页显示字符集
+     [强制] <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+### 2. 命名规范
+
+#### 2.1合理的ID/CLASS命名
+    [强制] id和class取值统一用下划线“_”作为分隔符。
+    [推荐] 命名要表明其{产品}_{模块}/{功能}_{自定义};部分功能希望跨产品共用，可省略{产品}段。
+    [强制] 为减少繁多的CLASS命名，采用逐步叠加的方式。
+    如：
+    <a class="result_tittle" href="http://m.baidu.com"></a>
+    <div id="footer_wrap"><form id="se_form2"action="XX"method="get">XX</form></div>
+    搜索下框功能可以跨产品公用,产品段省略;footer_wrap:页面底部框;
+
+#### 2.3文件命名
+    [强制] 文件名称统一用小写的英文字母、数字和下划线的组合。
+
+### 3. 图片管理
+    [推荐]图片的名称需表明图片的产品、用途等信息，例如广告、标志、菜单、按钮、图标等。
+    [强制]图片命名用下划线“_”分隔；单张图片在无损压缩后<=8k。
+          如：<img alt="框计算" src=”http://{domain}/static/ala/ui/foot/ala_icon.gif”
+          从图片的命名可以看到产品线是阿拉丁，图片为图标。
+    [强制]{domain}不能是http://wap.baidu.com --> http://m.baidu.com。
+    [推荐]小图片尽量用base64编码存储png图片。
+    [推荐]可以把能够放在一组的小图标或者图片放在一个图片文件里，图片文件的总量会小，
+          而且减少http请求图片的次数和流量。小图片显而易见，便于管理。
+    [强制]确保img的src存在且不为空。图片<img src=””/> src为空时，在部分手机的默认浏览器下会导致多发一次搜索请求。
+          会导致流量监控数据增加。
+
+
+### 4. HTML注释  
+    [强制]需要加必要说明的注释请使用smarty注释，不能使用html注释。
+          例外：监控字段<!--STATUS OK-->和<!--SPD_XXX-->，这两个注释不能被删除.
+                 如果没有<!--STATUS OK-->则会引起域名监控报警。
+
+### 5. smarty注释
+    [推荐]每一独立部分都要表明注释，来明确其用途，例如：{%* noscript切简版 ---- begin *%}。
+    [强制]期间修改过重要的部分，必要的情况要注明修改时间和修改人以及修改的用途。

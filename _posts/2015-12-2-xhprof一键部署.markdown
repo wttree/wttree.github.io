@@ -1,0 +1,42 @@
+---
+layout:     post
+title:      "网页同native app通信和组件使用说明"
+subtitle:   "网页同native app通信和组件使用说明"
+date:       2015-11-10
+author:     "wttree"
+header-img: "img/post-bg-e2e-ux.jpg"
+tags:
+    - nodePPT
+    - nodejs
+---
+
+# xhprof一键部署
+
+<small>created by wutong03@baidu.com, 2013-01-31 </small>
+
+svn co https://svn.baidu.com/app-test/wise/trunk/common/autotest/screenshot/data/aladdin_imgs/tice/xingneng/xh
+
+进入目录
+
+sh build_xhprof.sh
+
+成功~！
+
+在搜索结果url中加上&xhprof=1 参数 即可
+
+样例http://dbl-wise-rdtt3.vm.baidu.com:8008/ssid=0/from=0/bd_page_type=1/uid=0/pu=ta%40iphone_1_4.3_3_533%2Cusm%404%2Csz%401320_2001/baiduid=8695611A5BB0B7E99F7B8DAE9A0093F9/s?word=123&st=11104i&ftime=826&tn=iphone&rawq=&ree=0&stime=1385525424572&mobile_se=0&dit=0&sa=ib&sugs=0&hiss=1&xhprof=1
+
+	下面是一些参数说明
+
+	Inclusive Time                 包括子函数所有执行时间。
+
+	Exclusive Time/Self Time  函数执行本身花费的时间，不包括子树执行时间。
+
+	Wall Time                        花去了的时间或挂钟时间。
+
+	CPU Time                        用户耗的时间+内核耗的时间
+
+	Inclusive CPU                  包括子函数一起所占用的CPU
+	
+	Exclusive CPU                  函数自身所占用的CPU
+	 
