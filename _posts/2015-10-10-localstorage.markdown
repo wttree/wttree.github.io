@@ -2,12 +2,13 @@
 layout:     post
 title:      "localStorage使用规范"
 subtitle:   "localStorage使用规范"
-date:       2015-11-10
+date:       2015-10-10
 author:     "wttree"
 header-img: "img/post-bg-e2e-ux.jpg"
 tags:
     - localStorage
 ---
+
 
 # localStorage使用规范
 
